@@ -1,0 +1,7 @@
+input {
+  border-radius: 100%;
+  margin: 10px;
+}
+.selected {
+  background-color: #a6ff00;
+}
