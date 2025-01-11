@@ -27,7 +27,7 @@ export default function App() {
   const GlobalStyle = createGlobalStyle`
   *
   {
-    background-color: #d8ff9c;
+    background-color: beige;
   }
 
   `;
