@@ -254,7 +254,8 @@ const NavBar = styled.div`
   box-shadow: 0px 18px 40px 15px #ffffff;
 `;
 const TestColumn = styled.div`
-  margin-top: 200px;
+  margin-top: 10vh;
+  margin-left: 5vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -273,8 +274,8 @@ const TestButton = (a: {
       type="submit"
       value={" "}
       style={{
-        width: a.a + "px",
-        height: a.a + "px",
+        width: a.a + "vw",
+        height: a.a + "vw",
         opacity: a.disabled ? 0.5 : 1,
       }}
       name={a.name}
@@ -322,7 +323,7 @@ export default function Test() {
         <TestForm>
           그렇지않다
           <TestButton
-            a={100}
+            a={10}
             name="0"
             isSelected={v.get("0") ?? false}
             onClick={() => {
@@ -341,7 +342,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={80}
+            a={8}
             name="1"
             isSelected={v.get("1") ?? false}
             onClick={() => {
@@ -360,7 +361,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={60}
+            a={6}
             name="2"
             isSelected={v.get("2") ?? false}
             onClick={() => {
@@ -379,7 +380,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={80}
+            a={8}
             name="3"
             isSelected={v.get("3") ?? false}
             onClick={() => {
@@ -398,7 +399,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={100}
+            a={10}
             name="4"
             isSelected={v.get("4") ?? false}
             onClick={() => {
