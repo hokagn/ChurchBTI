@@ -254,8 +254,6 @@ const NavBar = styled.div`
   box-shadow: 0px 18px 40px 15px #ffffff;
 `;
 const TestColumn = styled.div`
-  margin-top: 10vh;
-  margin-left: 5vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -290,7 +288,13 @@ const TestForm = styled.form`
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: center;
+`;
+const ROW = styled.form`
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: space-between;
+  flex-direction: row;
 `;
 const StartButton = styled.button`
   background-color: #fd8700;
@@ -318,12 +322,15 @@ export default function Test() {
       ])
     );
     return (
-      <div>
+      <TestColumn>
         {question.question}
+        <ROW>
+          <h3>그렇지않다</h3>
+          <h3>그렇다</h3>
+        </ROW>
         <TestForm>
-          그렇지않다
           <TestButton
-            a={10}
+            a={15}
             name="0"
             isSelected={v.get("0") ?? false}
             onClick={() => {
@@ -342,7 +349,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={8}
+            a={12}
             name="1"
             isSelected={v.get("1") ?? false}
             onClick={() => {
@@ -361,7 +368,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={6}
+            a={9}
             name="2"
             isSelected={v.get("2") ?? false}
             onClick={() => {
@@ -380,7 +387,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={8}
+            a={12}
             name="3"
             isSelected={v.get("3") ?? false}
             onClick={() => {
@@ -399,7 +406,7 @@ export default function Test() {
             disabled={selected}
           />
           <TestButton
-            a={10}
+            a={15}
             name="4"
             isSelected={v.get("4") ?? false}
             onClick={() => {
@@ -417,14 +424,16 @@ export default function Test() {
             }}
             disabled={selected}
           />
-          그렇다
         </TestForm>
-      </div>
+      </TestColumn>
     );
   }
   return (
     <TestColumn>
       <NavBar>CBTI</NavBar>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
       {testList.map((test, i) => {
         return NthTest(test, i);
       })}
