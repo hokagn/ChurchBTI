@@ -8,7 +8,7 @@ const HomeWrapper = styled.div`
   gap: 10px;
 `;
 const Banner = styled.img`
-  width: 500px;
+  width: 50vw;
 `;
 const StartButton = styled.button`
   background-color: #fd8700;

@@ -11,22 +11,28 @@ const Column = styled.div`
   align-items: center;
 `;
 const TitleName = styled.div`
-  font-size: 90px;
+  font-size: 20pt;
 `;
 const ResultWrapper = styled.div`
   display: grid;
   grid-template-columns: 0fr 1fr 0fr;
   border-radius: 30px;
-  border: 10px inset black;
+  background-color: white;
+  box-shadow: 5px 10px 25px 1px #00000030;
   padding: 20px;
 `;
 const ResultName = styled.text`
-  font-size: 100px;
-  transform: translateY(-20px);
+  font-size: 40pt;
+  background-color: white;
 `;
 const ResultValue = styled.text`
-  font-size: 90px;
-  transform: translate(120px, 80px);
+  font-size: 4vh;
+  transform: translate(0, 4vh);
+`;
+const Svg = styled.svg`
+  width: 50vw;
+  height: 5vh;
+  background-color: lightcoral;
 `;
 export default function Result() {
   const [result, setResult] = useState<CBTI | null>(null);
@@ -46,36 +52,28 @@ export default function Result() {
       </TitleName>
       <ResultWrapper>
         <ResultName>I</ResultName>
-        <svg width={400} height={100}>
-          <Rect width={(result?.ItoE ?? 0) * 2} height={100} />
-          <ResultValue width={400} height={100}>
-            {result?.ItoE ?? 0}
-          </ResultValue>
-        </svg>
+        <Svg>
+          <Rect width={((result?.ItoE ?? 0) / 200) * 50 + "vw"} height={100} />
+          <ResultValue>{result?.ItoE ?? 0}</ResultValue>
+        </Svg>
         <ResultName>E</ResultName>
         <ResultName>N</ResultName>
-        <svg width={400} height={100}>
-          <Rect width={(result?.NtoS ?? 0) * 2} height={100} />
-          <ResultValue width={400} height={100}>
-            {result?.NtoS ?? 0}
-          </ResultValue>
-        </svg>
+        <Svg>
+          <Rect width={((result?.NtoS ?? 0) / 200) * 50 + "vw"} height={100} />
+          <ResultValue>{result?.NtoS ?? 0}</ResultValue>
+        </Svg>
         <ResultName>S</ResultName>
         <ResultName>F</ResultName>
-        <svg width={400} height={100}>
-          <Rect width={(result?.FtoT ?? 0) * 2} height={100} />
-          <ResultValue width={400} height={100}>
-            {result?.FtoT ?? 0}
-          </ResultValue>
-        </svg>
+        <Svg>
+          <Rect width={((result?.FtoT ?? 0) / 200) * 50 + "vw"} height={100} />
+          <ResultValue>{result?.FtoT ?? 0}</ResultValue>
+        </Svg>
         <ResultName>T</ResultName>
         <ResultName>P</ResultName>
-        <svg width={400} height={100}>
-          <Rect width={(result?.PtoJ ?? 0) * 2} height={100} />
-          <ResultValue width={400} height={100}>
-            {result?.PtoJ ?? 0}
-          </ResultValue>
-        </svg>
+        <Svg>
+          <Rect width={((result?.PtoJ ?? 0) / 200) * 50 + "vw"} height={100} />
+          <ResultValue>{result?.PtoJ ?? 0}</ResultValue>
+        </Svg>
         <ResultName>J</ResultName>
       </ResultWrapper>
       <Link to="/">
