@@ -238,7 +238,7 @@ const testList: Question[] = [
       "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
   },
 ];
-const answer: Answer[] = [];
+let answer: Answer[] = [];
 
 const NavBar = styled.div`
   position: fixed;
@@ -462,6 +462,7 @@ export default function Test() {
                   cbti.PtoJ,
               };
             });
+            answer = [];
             localStorage.setItem(
               "result",
               JSON.stringify({
