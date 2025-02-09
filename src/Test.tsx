@@ -20,7 +20,43 @@ type Answer = {
 const testList: Question[] = [
   {
     cbtiEffect: {
-      ItoE: 100,
+      ItoE: 30,
+      NtoS: 0,
+      FtoT: 0,
+      PtoJ: 0,
+    },
+    question: "친구들과 지내면서 에너지를 회복한다.",
+  },
+  {
+    cbtiEffect: {
+      ItoE: 0,
+      NtoS: -30,
+      FtoT: 0,
+      PtoJ: 0,
+    },
+    question: "직관적인구절보다 복잡한구절에 흥미를 느낀다",
+  },
+  {
+    cbtiEffect: {
+      ItoE: 0,
+      NtoS: 0,
+      FtoT: -30,
+      PtoJ: 0,
+    },
+    question: "해결책을 제시하기보다는 공감해주는 편이다.",
+  },
+  {
+    cbtiEffect: {
+      ItoE: 0,
+      NtoS: 0,
+      FtoT: 0,
+      PtoJ: 30,
+    },
+    question: "기도를 해야하는경우 기도내용을 상세히 준비한다.",
+  },
+  {
+    cbtiEffect: {
+      ItoE: 10,
       NtoS: 0,
       FtoT: 0,
       PtoJ: 0,
@@ -30,212 +66,74 @@ const testList: Question[] = [
   {
     cbtiEffect: {
       ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
+      NtoS: 0,
+      FtoT: 10,
+      PtoJ: 5,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "규칙을 세우고 지키기를 좋아한다.",
   },
   {
     cbtiEffect: {
       ItoE: 0,
-      NtoS: 100,
+      NtoS: 20,
       FtoT: 0,
       PtoJ: 0,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "성경구절을 읽을때 적힌 그대로 받아들인다.",
   },
   {
     cbtiEffect: {
       ItoE: 0,
-      NtoS: 100,
+      NtoS: 2,
+      FtoT: 3,
+      PtoJ: 10,
+    },
+    question: "마감보다 숙제를 더 먼저 완료한다",
+  },
+  {
+    cbtiEffect: {
+      ItoE: 10,
+      NtoS: 0,
       FtoT: 0,
       PtoJ: 0,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "대화를 먼저 시작한다.",
   },
   {
     cbtiEffect: {
       ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
+      NtoS: 0,
+      FtoT: 10,
       PtoJ: 0,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "잘못을 정확하게 따진다.",
   },
   {
     cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
+      ItoE: -10,
+      NtoS: 0,
       FtoT: 0,
-      PtoJ: 0,
+      PtoJ: 10,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "실수에 민감하다.",
   },
   {
     cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
+      ItoE: 10,
+      NtoS: 2,
+      FtoT: 10,
       PtoJ: 0,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "자기주장이 뚜렷하다.",
   },
   {
     cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
+      ItoE: 3,
+      NtoS: 0,
       FtoT: 0,
-      PtoJ: 0,
+      PtoJ: 10,
     },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
-  },
-  {
-    cbtiEffect: {
-      ItoE: 0,
-      NtoS: 100,
-      FtoT: 0,
-      PtoJ: 0,
-    },
-    question:
-      "단순하고 직관적인 아이디어보다는 복잡하고 참신한 아이디어에 흥미를 느낀다.",
+    question: "책상이 잘 정돈되어있다..",
   },
 ];
 let answer: Answer[] = [];
@@ -244,14 +142,14 @@ const NavBar = styled.div`
   position: fixed;
   z-index: 10000;
   top: 0%;
-  width: 100%;
+  width: 110vw;
   height: 10vh;
   align-content: center;
   align-self: center;
-  background-color: white;
+  background-color: whitesmoke;
   text-align: center;
   font-size: 32px;
-  box-shadow: 0px 18px 40px 15px #ffffff;
+  box-shadow: 0px 18px 40px 15px whitesmoke;
 `;
 const TestColumn = styled.div`
   width: 100%;
@@ -297,11 +195,11 @@ const ROW = styled.form`
   flex-direction: row;
 `;
 const StartButton = styled.button`
-  background-color: #fd8700;
-  border-radius: 30px;
-  border: 2px inset black;
-  padding: 20px 50px;
-  font-size: 32px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px inset black;
+  padding: 10px 80px;
+  font-size: 20px;
 `;
 export default function Test() {
   function onSubmit(multiplier: number, questionNumber: number) {

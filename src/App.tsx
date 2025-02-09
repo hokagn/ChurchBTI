@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import Test from "./Test";
 import Result from "./Result";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -20,20 +20,13 @@ export default function App() {
     },
   ]);
   const Wrapper = styled.div`
-    height: 100vh;
     display: flex;
     justify-content: center;
-  `;
-  const GlobalStyle = createGlobalStyle`
-  *
-  {
-    background-color: beige;
-  }
-
+    width: 100vw;
+    height: 100vh;
   `;
   return (
     <Wrapper>
-      <GlobalStyle></GlobalStyle>
       <RouterProvider router={router}></RouterProvider>
     </Wrapper>
   );

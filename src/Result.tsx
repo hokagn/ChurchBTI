@@ -20,6 +20,7 @@ const ResultWrapper = styled.div`
   background-color: white;
   box-shadow: 5px 10px 25px 1px #00000030;
   padding: 20px;
+  align-items: center;
 `;
 const ResultName = styled.text`
   font-size: 40pt;
@@ -54,25 +55,33 @@ export default function Result() {
         <ResultName>I</ResultName>
         <Svg>
           <Rect width={((result?.ItoE ?? 0) / 200) * 50 + "vw"} height={100} />
-          <ResultValue>{result?.ItoE ?? 0}</ResultValue>
+          <ResultValue>
+            {100 - (result?.ItoE ?? 0) / 2}:{(result?.ItoE ?? 0) / 2}
+          </ResultValue>
         </Svg>
         <ResultName>E</ResultName>
         <ResultName>N</ResultName>
         <Svg>
           <Rect width={((result?.NtoS ?? 0) / 200) * 50 + "vw"} height={100} />
-          <ResultValue>{result?.NtoS ?? 0}</ResultValue>
+          <ResultValue>
+            {100 - (result?.NtoS ?? 0) / 2}:{(result?.NtoS ?? 0) / 2}
+          </ResultValue>
         </Svg>
         <ResultName>S</ResultName>
         <ResultName>F</ResultName>
         <Svg>
           <Rect width={((result?.FtoT ?? 0) / 200) * 50 + "vw"} height={100} />
-          <ResultValue>{result?.FtoT ?? 0}</ResultValue>
+          <ResultValue>
+            {100 - (result?.FtoT ?? 0) / 2}:{(result?.FtoT ?? 0) / 2}
+          </ResultValue>
         </Svg>
         <ResultName>T</ResultName>
         <ResultName>P</ResultName>
         <Svg>
           <Rect width={((result?.PtoJ ?? 0) / 200) * 50 + "vw"} height={100} />
-          <ResultValue>{result?.PtoJ ?? 0}</ResultValue>
+          <ResultValue>
+            {100 - (result?.PtoJ ?? 0) / 2}:{(result?.PtoJ ?? 0) / 2}
+          </ResultValue>
         </Svg>
         <ResultName>J</ResultName>
       </ResultWrapper>
