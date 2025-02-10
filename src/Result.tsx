@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { CBTI } from "./Test";
 import { Link } from "react-router-dom";
@@ -12,6 +12,9 @@ const Column = styled.div`
 `;
 const TitleName = styled.div`
   font-size: 20pt;
+`;
+const ResultImage = styled.img`
+  width: 50vw;
 `;
 const ResultWrapper = styled.div`
   display: grid;
@@ -41,10 +44,92 @@ export default function Result() {
     const rawData = localStorage.getItem("result") ?? " ";
     setResult(JSON.parse(rawData));
   }
-
+  function mbti() {
+    return (
+      ((result?.ItoE ?? 100) > 100 ? "E" : "I") +
+      ((result?.NtoS ?? 100) > 100 ? "S" : "N") +
+      ((result?.FtoT ?? 100) > 100 ? "T" : "F") +
+      ((result?.PtoJ ?? 100) > 100 ? "J" : "P")
+    );
+  }
+  let resultImage = "";
+  let resultName = "";
+  switch (mbti()) {
+    case "INFP":
+      resultImage = "/바나바.jpg";
+      resultName = "바나바";
+      break;
+    case "INFJ":
+      resultImage = "/예레미아.webp";
+      resultName = "예레미아";
+      break;
+    case "INTP":
+      resultImage = "/솔로몬.jpg";
+      resultName = "솔로몬";
+      break;
+    case "INTJ":
+      resultImage = "/노아.webp";
+      resultName = "노아";
+      break;
+    case "ISFP":
+      resultImage = "/아담.png";
+      resultName = "아담";
+      break;
+    case "ISFJ":
+      resultImage = "/마리아.jpg";
+      resultName = "마리아";
+      break;
+    case "ISTP":
+      resultImage = "/라반.jpg";
+      resultName = "라반";
+      break;
+    case "ISTJ":
+      resultImage = "/누가.jpg";
+      resultName = "누가";
+      break;
+    case "ENFP":
+      resultImage = "/베드로.png";
+      resultName = "베드로";
+      break;
+    case "ENFJ":
+      resultImage = "/요나단.png";
+      resultName = "요나단";
+      break;
+    case "ENTP":
+      resultImage = "/에스더.jpg";
+      resultName = "에스더";
+      break;
+    case "ENTJ":
+      resultImage = "/바울.jpg";
+      resultName = "바울";
+      break;
+    case "ESFP":
+      resultImage = "/돌아온 탕아.webp";
+      resultName = "돌아온 탕아";
+      break;
+    case "ESFJ":
+      resultImage = "/다윗.webp";
+      resultName = "다윗";
+      break;
+    case "ESTP":
+      resultImage = "/리브가.webp";
+      resultName = "리브가";
+      break;
+    case "ESTJ":
+      resultImage = "/드보라.jpg";
+      resultName = "드보라";
+      break;
+  }
+  useLayoutEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <Column>
       <TitleName>검사결과</TitleName>
+      {resultName}
+      <ResultImage src={resultImage} />
       <TitleName>
         {(result?.ItoE ?? 100) > 100 ? "E" : "I"}
         {(result?.NtoS ?? 100) > 100 ? "S" : "N"}
