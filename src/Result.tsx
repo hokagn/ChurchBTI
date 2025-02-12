@@ -128,7 +128,6 @@ export default function Result() {
   return (
     <Column>
       <TitleName>검사결과</TitleName>
-      {resultName}
       <ResultImage src={resultImage} />
       <TitleName>
         {(result?.ItoE ?? 100) > 100 ? "E" : "I"}
@@ -136,6 +135,7 @@ export default function Result() {
         {(result?.FtoT ?? 100) > 100 ? "T" : "F"}
         {(result?.PtoJ ?? 100) > 100 ? "J" : "P"}
       </TitleName>
+      <TitleName>{resultName}</TitleName>
       <ResultWrapper>
         <ResultName>I</ResultName>
         <Svg>
