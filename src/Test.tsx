@@ -170,7 +170,7 @@ const TestButton = (a: {
       type="submit"
       value={" "}
       style={{
-        backgroundColor: {a.isSelected ? "grey" : "lightgrey"},
+        backgroundColor: a.isSelected? "grey" : "lightgrey",
         width: a.a + "vw",
         height: a.a + "vw",
         opacity: a.disabled ? 0.5 : 1,
