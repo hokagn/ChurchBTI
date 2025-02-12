@@ -15,7 +15,7 @@ const Banner = styled.img`
 
 const BannerWrapper = styled.div`
   background-color: white;
-  width: 100vw;
+  width: 110vw;
   height: 60px;
   display: flex;
   justify-content: center;
