@@ -222,11 +222,11 @@ export default function Test() {
     );
     return (
       <TestColumn>
-        {question.question}
         <ROW>
           <h3>그렇지않다</h3>
           <h3>그렇다</h3>
         </ROW>
+        {question.question}
         <TestForm>
           <TestButton
             a={15}
