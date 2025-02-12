@@ -224,9 +224,9 @@ export default function Test() {
       <TestColumn>
         <ROW>
           <h3>그렇지않다</h3>
+          {question.question}
           <h3>그렇다</h3>
         </ROW>
-        {question.question}
         <TestForm>
           <TestButton
             a={15}
