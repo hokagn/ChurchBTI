@@ -60,7 +60,7 @@ export default function Result() {
       resultName = "바나바";
       break;
     case "INFJ":
-      resultImage = "/예레미아.webp";
+      resultImage = "/에레미아.webp";
       resultName = "예레미아";
       break;
     case "INTP":
