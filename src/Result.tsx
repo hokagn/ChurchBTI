@@ -104,7 +104,7 @@ export default function Result() {
       resultName = "바울";
       break;
     case "ESFP":
-      resultImage = "/돌아온 탕아.webp";
+      resultImage = "/돌아온탕아.webp";
       resultName = "돌아온 탕아";
       break;
     case "ESFJ":
