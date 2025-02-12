@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import { CBTI } from "./Test";
 import { Link } from "react-router-dom";
