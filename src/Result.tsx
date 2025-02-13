@@ -141,7 +141,7 @@ export default function Result() {
         <Svg>
           <Rect width={((result?.ItoE ?? 0) / 200) * 50 + "vw"} height={100} />
           <ResultValue>
-            {100 - (result?.ItoE ?? 0) / 2}:{(result?.ItoE ?? 0) / 2}
+            {(result?.ItoE ?? 0) / 2}:{100 - (result?.ItoE ?? 0) / 2}
           </ResultValue>
         </Svg>
         <ResultName>E</ResultName>
@@ -149,7 +149,7 @@ export default function Result() {
         <Svg>
           <Rect width={((result?.NtoS ?? 0) / 200) * 50 + "vw"} height={100} />
           <ResultValue>
-            {100 - (result?.NtoS ?? 0) / 2}:{(result?.NtoS ?? 0) / 2}
+            {(result?.NtoS ?? 0) / 2}:{100 - (result?.NtoS ?? 0) / 2}
           </ResultValue>
         </Svg>
         <ResultName>S</ResultName>
@@ -157,7 +157,7 @@ export default function Result() {
         <Svg>
           <Rect width={((result?.FtoT ?? 0) / 200) * 50 + "vw"} height={100} />
           <ResultValue>
-            {100 - (result?.FtoT ?? 0) / 2}:{(result?.FtoT ?? 0) / 2}
+            {(result?.FtoT ?? 0) / 2}:{100 -(result?.FtoT ?? 0) / 2}
           </ResultValue>
         </Svg>
         <ResultName>T</ResultName>
@@ -165,7 +165,7 @@ export default function Result() {
         <Svg>
           <Rect width={((result?.PtoJ ?? 0) / 200) * 50 + "vw"} height={100} />
           <ResultValue>
-            {100 - (result?.PtoJ ?? 0) / 2}:{(result?.PtoJ ?? 0) / 2}
+            { (result?.PtoJ ?? 0) / 2}:{100 -(result?.PtoJ ?? 0) / 2}
           </ResultValue>
         </Svg>
         <ResultName>J</ResultName>
